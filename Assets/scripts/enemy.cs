@@ -13,7 +13,7 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + (1 * Time.deltaTime), transform.position.y);
+        transform.position = new Vector3(transform.position.x + (speed * Time.deltaTime), transform.position.y);
         
     }
 }

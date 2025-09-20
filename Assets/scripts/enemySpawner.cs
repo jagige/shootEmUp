@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class enemySpawner : MonoBehaviour
 {
     public GameObject enemyNave2Prefab;
+    public float timeToSpawn;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,9 +14,22 @@ public class enemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.pKey.wasPressedThisFrame)
+        timeToSpawn -= Time.deltaTime;
+        if(timeToSpawn <= 0)
+        {
+            var enemySpawner = Instantiate(enemyNave2Prefab, transform.position, Quaternion.identity);
+            timeToSpawn = 2;
+
+            enemy enemyComponent = enemySpawner.GetComponent<enemy>();
+
+            float randomSpeed = Random.Range(1, 20);
+
+            enemyComponent.speed = randomSpeed;
+        }
+
+        /*if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             Instantiate(enemyNave2Prefab);
-        }
+        }*/
     }
 }
