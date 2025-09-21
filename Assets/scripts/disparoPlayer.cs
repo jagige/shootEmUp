@@ -3,6 +3,8 @@ using UnityEngine;
 public class disparoPlayer : MonoBehaviour
 {
     public int attack;
+    public int damage;
+    public float speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,6 +14,6 @@ public class disparoPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y + (1 * Time.deltaTime));
+        transform.position = new Vector3(transform.position.x, transform.position.y + (speed * Time.deltaTime));
     }
 }

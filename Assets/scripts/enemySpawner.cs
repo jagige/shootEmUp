@@ -27,9 +27,9 @@ public class enemySpawner : MonoBehaviour
             enemyComponent.speed = randomSpeed;
         }
 
-        /*if (Keyboard.current.pKey.wasPressedThisFrame)
-        {
-            Instantiate(enemyNave2Prefab);
-        }*/
+        //if (Keyboard.current.pKey.wasPressedThisFrame)
+        //{
+        //    Instantiate(enemyNave2Prefab);
+        //}
     }
 }

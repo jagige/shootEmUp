@@ -6,6 +6,7 @@ public class playerController : MonoBehaviour
     private Rigidbody2D _rb;
     [SerializeField] private float _speed;
     public GameObject disparoPlayerPrefab;
+    public float timeToShoot;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,17 +16,17 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.bKey.wasPressedThisFrame)
+        /*if (Keyboard.current.bKey.wasPressedThisFrame)
         {
-            Instantiate(disparoPlayerPrefab);
+            Instantiate(disparoPlayerPrefab, transform.position, Quaternion.identity);
         }
         if (Gamepad.current != null)
         {
             if (Gamepad.current.bButton.wasPressedThisFrame) 
             {
-                Instantiate(disparoPlayerPrefab);
+                Instantiate(disparoPlayerPrefab, transform.position, Quaternion.identity);
             }
-        }
+        }*/
     }
     private void OnMove(InputValue inputValue)
     {
@@ -35,6 +36,7 @@ public class playerController : MonoBehaviour
 
     private void OnAttack()
     {
-        Debug.Log("Se ejecutó On attack");
+       Instantiate(disparoPlayerPrefab, transform.position, Quaternion.identity);
+        //Debug.Log("Se ejecutó On attack");
     }
 }
