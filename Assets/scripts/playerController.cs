@@ -32,6 +32,8 @@ public class playerController : MonoBehaviour
     {
         Vector2 move = inputValue.Get<Vector2>();
         _rb.linearVelocity = move * _speed;
+
+       
     }
 
     private void OnAttack()
@@ -39,4 +41,9 @@ public class playerController : MonoBehaviour
        Instantiate(disparoPlayerPrefab, transform.position, Quaternion.identity);
         //Debug.Log("Se ejecutó On attack");
     }
+
+   /* private void LateUpdate()
+    {
+        _rb.position = new Vector2(Mathf.Clamp(_rb.position.x, -8.05f, 8.05f), _rb.position.y);
+    }*/
 }

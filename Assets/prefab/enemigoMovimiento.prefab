@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1126896413627190446}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.59, y: 4.8, z: 0}
+  m_LocalPosition: {x: -6.9500003, y: 0.46000004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 6330304306293431886}
   m_Layer: 0
   m_Name: naves3-b
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 6156232162620956513}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.21, y: 4.73, z: 0}
+  m_LocalPosition: {x: -5.57, y: 0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f642a233d9c565b48aa36a1c79dd4715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemy
-  life: 0
+  life: 1
   speed: 0
   attack: 0
   explosionPrefab: {fileID: 84508101525147942, guid: bc84e4364e61aeb4c94f888ccf59a543, type: 3}
@@ -229,6 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6711780041372054922}
+  - component: {fileID: 8590320808268288881}
   m_Layer: 0
   m_Name: enemigoMovimiento
   m_TagString: Untagged
@@ -245,7 +246,7 @@ Transform:
   m_GameObject: {fileID: 7342303195667369939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.31512, y: -1.61642, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -254,6 +255,18 @@ Transform:
   - {fileID: 4464497462365456465}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8590320808268288881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342303195667369939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424d4052e031bd94f8d5403d231e0cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyMovDestroy
 --- !u!1 &8642901406168465189
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 8642901406168465189}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.8, z: 0}
+  m_LocalPosition: {x: 6.64, y: 0.46000004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

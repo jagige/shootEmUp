@@ -5,6 +5,8 @@ public class enemySpawner : MonoBehaviour
 {
     public GameObject enemyNave2Prefab;
     public float timeToSpawn;
+    public float randomRango1;
+    public float randomRango2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +24,7 @@ public class enemySpawner : MonoBehaviour
 
             enemy enemyComponent = enemySpawner.GetComponent<enemy>();
 
-            float randomSpeed = Random.Range(1, 20);
+            float randomSpeed = Random.Range(randomRango1, randomRango2);
 
             enemyComponent.speed = randomSpeed;
         }

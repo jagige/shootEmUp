@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8616466936020692869
+--- !u!1 &5044715129028150617
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8185722359563274599}
-  - component: {fileID: 6232720688556100220}
-  - component: {fileID: 4040899428251178168}
-  - component: {fileID: 2102991824480966707}
-  - component: {fileID: 6075720206863760052}
+  - component: {fileID: 9140693665028655765}
+  - component: {fileID: 3244904211882903045}
+  - component: {fileID: 1415841616902099569}
+  - component: {fileID: 1582746729178162262}
+  - component: {fileID: 1240165425348952623}
   m_Layer: 0
-  m_Name: enemyNave2
+  m_Name: asteroide
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8185722359563274599
+--- !u!4 &9140693665028655765
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616466936020692869}
+  m_GameObject: {fileID: 5044715129028150617}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4087076, y: 2.855628, z: 0}
+  m_LocalPosition: {x: 2.92, y: 3.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6232720688556100220
+--- !u!212 &3244904211882903045
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616466936020692869}
+  m_GameObject: {fileID: 5044715129028150617}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,40 +82,51 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2182377363072818956, guid: b0f220c5c434bb94786ed60d5a01c2fb, type: 3}
+  m_Sprite: {fileID: 7640619854836255113, guid: 37c34bf39248eef4dbb9f1f76f1a9af3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.6, y: 1.6}
+  m_Size: {x: 1.5, y: 1.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4040899428251178168
-MonoBehaviour:
+--- !u!50 &1415841616902099569
+Rigidbody2D:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616466936020692869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f642a233d9c565b48aa36a1c79dd4715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::enemy
-  life: 1
-  speed: 0
-  attack: 3
-  explosionPrefab: {fileID: 84508101525147942, guid: bc84e4364e61aeb4c94f888ccf59a543, type: 3}
---- !u!58 &2102991824480966707
+  m_GameObject: {fileID: 5044715129028150617}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1582746729178162262
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616466936020692869}
+  m_GameObject: {fileID: 5044715129028150617}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -144,31 +155,20 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.8
---- !u!50 &6075720206863760052
-Rigidbody2D:
-  serializedVersion: 5
+  m_Radius: 0.75
+--- !u!114 &1240165425348952623
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616466936020692869}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_GameObject: {fileID: 5044715129028150617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642a233d9c565b48aa36a1c79dd4715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemy
+  life: 5
+  speed: 0
+  attack: 0
+  explosionPrefab: {fileID: 84508101525147942, guid: bc84e4364e61aeb4c94f888ccf59a543, type: 3}

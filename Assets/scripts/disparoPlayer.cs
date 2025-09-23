@@ -16,4 +16,14 @@ public class disparoPlayer : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + (speed * Time.deltaTime));
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy")) //(collision.gameObject.name == "paredFrente")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 }
