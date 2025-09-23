@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
-    
+    public GameObject boss;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +20,10 @@ public class gameManager : MonoBehaviour
             SceneManager.LoadScene("JuegoNavecitas");
         }
 
+        if (boss == null)
+        {
+            SceneManager.LoadScene("JuegoNavecitas");
+        }
     }
 
    

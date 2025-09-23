@@ -42,8 +42,11 @@ public class playerController : MonoBehaviour
         //Debug.Log("Se ejecutó On attack");
     }
 
-   /* private void LateUpdate()
+    /* //esto es para que no se salga de la pantalla
+    private void LateUpdate()
     {
         _rb.position = new Vector2(Mathf.Clamp(_rb.position.x, -8.05f, 8.05f), _rb.position.y);
     }*/
+
+    
 }
